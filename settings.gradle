@@ -1,0 +1,2 @@
+rootProject.name = "Phone Pe UI"
+include ':app'
