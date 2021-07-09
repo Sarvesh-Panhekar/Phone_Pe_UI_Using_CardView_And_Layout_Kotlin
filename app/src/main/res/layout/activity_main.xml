@@ -12,23 +12,42 @@
     <View
         android:id="@+id/top_background"
         android:layout_width="0dp"
-        android:layout_height="60"
+        android:layout_height="60dp"
         android:background="#3e31f0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="5dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@+id/top_background"
         app:layout_constraintEnd_toEndOf="@+id/top_background"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/notification" />
+        app:layout_constraintTop_toTopOf="@+id/top_background">
 
+        <ImageView
+            android:id="@+id/notification"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+
+            app:layout_constraintEnd_toStartOf="@+id/scanner"
+            app:srcCompat="@drawable/notification" />
+
+        <ImageView
+            android:id="@+id/scanner"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/scanner" />
+
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+
+            app:srcCompat="@drawable/help" />
+    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -525,8 +544,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_margin="5dp"
                         android:clickable="true"
@@ -550,8 +569,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_margin="5dp"
                         android:clickable="true"
@@ -575,8 +594,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_margin="5dp"
                         android:clickable="true"
@@ -600,8 +619,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_margin="5dp"
                         android:clickable="true"
@@ -625,14 +644,61 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+
+
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/insurance"
+                android:layout_width="70dp"
+                android:layout_height="37dp"
+                app:srcCompat="@drawable/insurance" />
+
+            <ImageView
+                android:id="@+id/store"
+                android:layout_width="80dp"
+                android:layout_height="37dp"
+                app:srcCompat="@drawable/store" />
+
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="80dp"
+                android:layout_height="37dp"
+                app:srcCompat="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/history"
+                android:layout_width="80dp"
+                android:layout_height="37dp"
+                app:srcCompat="@drawable/history" />
+
+            <ImageView
+                android:id="@+id/money"
+                android:layout_width="70dp"
+                android:layout_height="37dp"
+                app:srcCompat="@drawable/money" />
+
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
